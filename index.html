@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font owesone cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="container forms">
+      
+      <!-- signup form -->
+      <div class="form signup">
+        <div class="form-content">
+          <header id="title">Sign<span>up</span></header>
+          <form action="#">
+            <div class="field input-field">
+              <input
+                type="text"
+                placeholder="First Name"
+                required
+                class="input-firstname"
+                id="firstName"
+              />
+              <input
+                type="text"
+                required
+                placeholder="Last Name"
+                id="lastName"
+                class="input-lastname"
+              />
+            </div>
+            <div class="field input-field">
+              <input
+                type="number"
+                placeholder="Phone Number"
+                name=""
+                class="input-number"
+                id="phnNumber"
+              />
+              <input
+                type="date"
+                required
+                class="input-date"
+                placeholder="birth of date"
+                id="date"
+              />
+            </div>
+            <div class="field input-field">
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                name=""
+                class="input-email"
+                id="email"
+              />
+            </div>
+            <div class="field input-field">
+              <input
+                type="password"
+                required
+                placeholder="Password"
+                name=""
+                class="input-password"
+                id="password"
+              />
+            </div>
+            <div class="field button-field">
+              <button id="signupBtn">Signup</button>
+            </div>
+          </form>
+          <div class="form-link">
+            <span
+              >Already have an account?
+              <a href="#" id="gotoLoginPage" class="loginbtn login-link"
+                >login
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="media-option">
+          <a href="#" class="field google">
+            <img src="./assest/google-logo.png" alt="logo" class="google-img" />
+            <span>Login with google</span></a
+          >
+        </div>
+      </div>
+      <!-- login  -->
+      <div class="form login">
+        <div class="form-content">
+          <header>Log<span>in</span></header>
+          <form action="#">
+            <div class="field input-field">
+              <input
+                type="email"
+                required
+                placeholder="Email"
+                class="input-email"
+                id="loginEmail"
+              />
+            </div>
+            <div class="field input-field">
+              <input
+                type="password"
+                required
+                placeholder="Password"
+                class="input-password"
+                id="loginPassword"
+              />
+              <!-- <i class="fa-regular fa-eye-slash eye-icon"></i> -->
+            </div>
+            <div class="form-link">
+              <a href="#" class="Forget-pass">Forget Password </a>
+            </div>
+            <div class="field button-field">
+              <button id="signinbtn">Login</button>
+            </div>
+          </form>
+          <div class="form-link">
+            <span
+              >Create a new account?
+              <a href="#" id="gotoSignupPage" class="signinBtn signup-link"
+                >Signup
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="media-option">
+          <a href="#" class="field facebook"
+            ><i class="fa-brands fa-facebook-f"></i>
+            <span>Login with Facebook</span></a
+          >
+        </div>
+
+        <div class="media-option">
+          <a href="#" class="field google">
+            <img src="./assest/google-logo.png" alt="logo" class="google-img" />
+            <span>Login with google</span></a
+          >
+        </div>
+      </div>
+    </section>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

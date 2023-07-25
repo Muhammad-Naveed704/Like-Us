@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    /* background-color: aqua; */
+
+} 
+body{
+    background:#F3F2EF;
+}
+/* ====================================NAV BAR======================================================= */
+.wrapper{
+    /* position: fixed;
+    z-index: 2222; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem 4rem;
+    background: #FFFFFF;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    /* height: 120px; */
+
+}
+.left ,.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.left{
+    display: flex;
+    gap: 0.7rem;
+    padding-left: 3rem;
+}
+.logo i{
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #0a66c2;
+}
+.input{
+    background: rgb(237, 245, 246);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    gap: 0.5rem;
+    border-radius: 0.2rem;
+}
+.input-search{
+    border: none;
+    background: transparent;
+    width:15rem;
+    height: 1.3rem;
+    outline: none;
+    font-size: 1rem;  
+    color: gray; 
+}
+.input-search::placeholder{
+    font-size: 0.8rem;
+    color: rgb(49,49,49);
+    font-weight: 100;
+}
+.input i{
+    font-size: 0.8rem;
+    color: gray;
+}
+.home, .network, .job, .message,.notification ,.me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 3px;
+    gap: 0.7rem;
+    cursor: pointer;
+}
+.me{
+    position: relative;
+    right: 10px;
+    top: 2px;
+    margin-bottom: 0px;
+}
+.home, .network:hover, .job:hover, .message:hover,.notification:hover ,.me i:hover,.me h6:hover,.work:hover,.work i:hover,.work h6:hover{
+    color: #000 !important;
+}
+.network, .job, .message,.notification,.me,.work{
+    color: gray;
+}
+.home, .network, .job, .message,.notification i{
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+}
+.down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: gray;
+    margin-top: 0px;
+}
+.down h6{
+    position: relative;
+    bottom: 4px;
+}
+.down .fa-angle-down{
+    position: relative;
+    bottom: 4px;
+}
+.me i{
+    color: gray;
+}
+.me i:first-child{
+    background: gray;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-pro {
+    text-decoration: none;
+    color: gray;
+    font-size: 0.9rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+}
+.link-pro:hover{
+    text-decoration: underline;
+    color: #0a66c2;
+}
+/* =======================================NAV BAR END=================================== */
+
+/* =======================MAIN SECTION START======================= */
+.container{
+    display: grid;
+    grid-template-columns   : 20% 53% 27%;
+    gap: 1.5rem;
+    width: 85%;
+    margin: 1.8rem auto;
+}
+/* .container section , main ,.right-side{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 40px;
+} */
+.sidebar{
+    /* margin-top:-1rem; */
+    background: #FFFFFF;
+    width: 100%;
+    height: 51vh;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    position: relative;
+}
+/* .left-sction{
+    position: -ms-page;
+    z-index: 222;
+} */
+.sidebar .top{
+    width:100% ;
+    height: 9vh;
+    background-image: url(../assest/background.jpeg);
+    background-attachment: fixed;
+    background-position: cover;
+    /* background-repeat: round; */
+    
+    /* background-repeat: no-repeat; */
+    
+    position: absolute;
+}
+.sidebar img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 3%;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid #fff;
+}
+.profile{
+    position: relative;
+    text-align: center;
+    top: 5.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    /* border: 1px solid red; */
+    border-bottom: 1px solid gray;
+    height: 13vh;
+}
+.profile small{
+    font-size: 0.7rem;
+    color: gray;
+}
+.profile h5{
+    cursor: pointer;
+    color: rgb(66, 66, 66);
+}
+.profile h5:hover{
+    text-decoration: underline;
+    
+}
+/* leftSctionBox2 */
+.sidebar .leftSctionBox2{
+    /* width: 100%; */
+    /* height: 100vh; */
+    position: relative;
+    top: 6%;
+}
+.leftSctionBox2 .analytics{
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid gray;
+    height:8vh;
+}
+.leftSctionBox2 .analytics:hover{
+    background:#EBEBEB;
+    cursor: pointer;
+    /* text-decoration: none; */
+    
+}
+.leftSctionBox2 .analytics h6{
+    text-decoration: underline;
+      padding-top: 0.3rem;
+      color: #696868;
+      font-size: 0.7rem;
+      font-weight: 100;
+}
+.leftSctionBox2 .analytics h5{ 
+    color: #474646;
+    text-decoration: underline;
+}
+.leftSctionBox2 .analytics h5:hover,h6:hover{
+    text-decoration: none !important;
+}
+.sidebar .leftSctionBox3{
+    /* border: 1px solid red; */
+    padding: 0.7rem 0.5rem;
+    position: relative;
+    top: 6%;
+    height: 3.5rem;
+    border-bottom: 1px solid gray;
+    height:8vh;
+}
+.sidebar .leftSctionBox3:hover{
+    background:#EBEBEB;
+    cursor: pointer;
+}
+.sidebar .leftSctionBox3 h6{
+    color: #696868;
+    /* border: 1px solid red; */
+    margin-bottom:0.3rem ;
+    font-weight: 100;
+}
+.sidebar .leftSctionBox3 a{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #474646;
+}
+.sidebar .leftSctionBox3 h5:hover{
+    color: #94B4DD;
+    text-decoration: underline;
+}
+.sidebar .leftSctionBox3 a i{
+    color: #ECBC74;
+}
+.leftSctionBox4{
+    position: relative;
+    top: 6%;
+    padding: 0.8rem 0.5rem;
+    overflow: hidden;
+    display: flex;
+    gap: 0.5rem;
+    /* margin-left: 0.5rem; */
+    color:#696868;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    /* margin: 0.6rem 0 0 0.5rem;  */
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 100%;
+    height: 3.1rem;
+}
+.leftSctionBox4:hover{
+    background:#EBEBEB;
+    cursor: pointer;
+}
+/* ================RECENT JOB SECTION=========== */
+.recent-jobs{
+/* border: 1px solid red; */
+background: #FFFFFF;
+margin-top: 0.7rem;
+width: 100%;
+height: 75vh;
+border-radius: 0.8rem;
+overflow: hidden;
+position: relative;
+}
+.recent-jobs .recent{
+    margin: 1rem;
+    color:#696868;
+    font-weight: 100;
+}
+.recent .one{
+    color:#696868;
+    display: flex;
+    margin-top: 0.8rem;
+    gap: 0.5rem;
+    align-items: center;
+
+}
+.recent .one i{
+    font-size: 0.8rem;
+}
+.recent-jobs .groups{
+    margin: 2rem 0 0 1rem;
+}
+.groups .group-heading{
+    color:#0a66c2;
+}
+.groups .two{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.7rem;
+    color:#696868;
+}
+.groups .show-more{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1.7rem;
+    gap: 0.5rem;
+    color: #696868;
+    cursor: pointer;
+
+}
+.events{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2rem 0 1rem;
+    /* border: 1px solid red; */
+
+
+}
+.events i{
+    color: #696868;
+    cursor: pointer;
+
+}
+.events .event-heading:hover{
+    color: #0a66c2;
+    cursor: pointer;
+}
+.discover{
+    text-align: center;
+    margin: 1.4rem 0rem 0 0;
+    border-top: 1px solid gray;
+    padding-top:1rem ;
+}
+.discover a{
+    text-decoration: none;
+    color: #696868;
+}
+/* ===================main ================ */
+main{
+    background: #FFFFFF;
+    border-radius: 0.8rem;
+    height: 20vh;
+    position: relative;    
+}
+.media-section .search{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 1rem;
+    padding: 1rem ;
+}
+.media-section .search img{
+    /* width: 3rem; */
+    height: 3rem;
+    border-radius: 50%;
+}
+.media-section .input-post{
+    border-radius: 5rem;
+    cursor: pointer;
+    border: 1px solid #696868;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;  
+    padding: 0 1rem;
+    transition: 0.3s all ease;
+}
+.media-section .input-post:hover{
+    background:#EBEBEB;
+}
+.post-area{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.6rem 2rem;
+}
+.post{
+    opacity: 0.7;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.post h6{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.post:hover{
+    background: gray;
+    cursor: pointer;
+
+}
+
+.post-area .post:nth-child(1) i{
+    color:#0a66c2 ;
+    font-size: 1.4rem;
+}
+.post-area .post:nth-child(2) i{
+    color:#19c20a;
+}
+.post-area .post:nth-child(3) i{
+    color:#C37D16;
+}
+.post-area .post:nth-child(4) i{
+    color:#E16745 ;
+}
+/* main #close{
+    border: 1px solid red;
+    position: absolute;
+    right:  2rem;
+    top: 1rem;
+    color: #696868;
+}
+main .event{
+    margin: 1.5rem 0 0 1rem;
+    font-weight: 200;
+}
+main .event h3{
+    color: #474646;
+    font-weight: 200;
+} */
+
+/* ===================RIGHT SIDE BAR START========================= */
+
+.right-side{
+    background: #FFFFFF;
+    border-radius: 0.8rem;
+    height: 85vh;
+
+}
+.right-side .feedBack{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+} 
+.feedBack h5 , i{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #696868;
+    cursor: pointer;
+}
+.user-pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 0.5rem 0 0 0.5rem;
+    
+}
+.user-pages img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.userPageinfo{
+    margin-left: 0.4rem;
+    /* position: absolute; */
+}
+.userPageinfo h5{
+    cursor: pointer;
+    font-size: 0.9rem;
+    /* padding: 0.5rem 0 0 0.5rem; */
+    font-weight: 600;
+}
+.userPageinfo h6{
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+.follow-btn{
+    width: 100%;
+    height: 2.3rem;
+    /* border: 1px solid red; */
+
+}
+.btn i{
+    margin-right:15px ;
+    font-weight: 800;
+}
+.btn{
+    /* position: absolute; */
+    /* top: 5%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 1px solid red; */
+    width: 8rem;
+    border-radius: 20px;
+    height: 2rem;
+    margin-left:7rem;
+    font-weight: 700;
+    background:#FFFFFF;
+    border: 1px solid #696868;    
+    /* padding-left: 4px; */
+}
+.btn:hover{
+    background-color: #EBEBEB;
+    cursor: pointer;
+}
+.viweAllPage-link{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    color: #696868;
+    /* border-bottom: 1px solid #474646; */
+}
+.viweAllPage-link:hover{
+    text-decoration: underline;
+    color: #0a66c2;
+    cursor: pointer;
+}
+.rightSideBorder{
+    padding-top: 20px;
+    border-bottom: 1px solid #474646;
+
+    
+}
+
+/* amir content=========== */
+
+
+
+ /* .postInputArea{
+    border: 1px solid red;
+    height: 100px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+} */
+ #postBtn{
+    width: 80px;
+    height: 30px;
+} 
+#postInput{
+ max-width: 400px;  
+ height: 30px; 
+}
+
+.postContentArea{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    height: 100vh;
+    /* border: 1px solid red; */
+    overflow: auto;
+    background-color: white;
+    padding: 20px;
+    
+}
+
+
+.ContentBox{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+
+} 
