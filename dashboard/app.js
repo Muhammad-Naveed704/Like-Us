@@ -56,6 +56,25 @@ if (docSnap.exists()) {
   console.log("No such document!");
 }
 }
+// post popup box modal
+
+const postPopupClose=document.getElementById("postPopupClose");
+const togglePopup=document.getElementById("togglePostPopup");
+togglePopup.addEventListener("click", togglePostPopup)
+postPopupClose.addEventListener("click", closePopUp)
+
+function closePopUp(){
+  document.getElementById("postPopup").classList.toggle("active");
+}
+function togglePostPopup(){
+  // console.log("done" +userName);
+  document.getElementById("postPopup").classList.toggle("active");
+}
+
+
+
+// post popup box modal end
+
 
 postBtn.addEventListener("click", postDataHandler)
 
@@ -66,7 +85,9 @@ async function postDataHandler(){
 try {
   const docRef = await addDoc(collection(db, "posts"), {
     activeUserId: loggedInUser,
-    postContent: postInput.value
+    postContent: postInput.value,
+
+
   });
   getPostData()
   console.log("Document written with ID: ", docRef.id);
@@ -76,7 +97,6 @@ try {
 
 async function getPostData(){
 
-  
 const querySnapshot = await getDocs(collection(db, "posts"));
 querySnapshot.forEach((doc) => {
   
@@ -87,9 +107,12 @@ querySnapshot.forEach((doc) => {
   const postElm = document.createElement('div');
   postElm.setAttribute('class','ContentBox');
 
-  postElm.innerHTML = ` <p id="userName" ></p>
-  <p id="userEmail" ></p>
+  postElm.innerHTML = ` <p>${firstName}</p>
+  <p >${lastName}</p>
+  <p>${email}</p>
   <p id="postDisplay">${postContent}</p>
+  <p id="activeUserId">${activeUserId}</p>
+  
   `
 postContentArea.appendChild(postElm); 
 
@@ -100,3 +123,4 @@ postContentArea.appendChild(postElm);
 }
 
 }
+

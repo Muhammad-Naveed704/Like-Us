@@ -166,13 +166,20 @@ a.google{
     border: 1px solid #cacaca;
     color: #fff;
     border-radius: 8px;
+   
 }
-
+a.google:hover{
+    border: 3px solid #cacaca;
+}
 
 a.google span{
     font-weight: 500;
     opacity: 0.6;
     color: #6b6666
+}
+a.google span:hover{
+    color: #000;
+    
 }
 
 

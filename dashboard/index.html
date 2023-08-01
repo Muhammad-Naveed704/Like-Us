@@ -26,7 +26,7 @@
           <div class="network"><i class="fa-solid fa-user-group"></i><h6>Network</h6></div>
           <div class="job"><i class="fa-solid fa-suitcase"></i><h6>Jobs</h6></div>
           <div class="message"><i class="fa-solid fa-message"></i><h6>Message</h6></div>
-          <div class="notification"><i class="fa-solid fa-bell"></i><h6>notification</h6></div>
+          <div class="notification"><i class="fa-solid fa-bell"></i><h6>Notification</h6></div>
           <div class="me"><i class="fa-solid fa-user"></i>
             <div class="down"><h6>Me</h6> <i class="fa-solid fa-angle-down"></i></div>
           </div>
@@ -135,12 +135,11 @@
           <div class="media-section">
             <div class="search">
               <img src="../assest/1684959391347.jpeg" alt="">
-              <input id="postInput" class="input-post" type="search" placeholder="Start a Post">
-              <button id="postBtn">post</button>
+              <input  class="input-post " id="togglePostPopup" type="search" placeholder="Start a Post">
             </div>
             <div class="post-area">
             <div class="photo-post post">
-              <i class="fa-solid fa-image"></i>
+              <i  class="fa-solid fa-image"></i>
               <h6>Photo</h6>
             </div>
             <div class="vedio-post post">
@@ -156,12 +155,48 @@
               <h6>Write artical </h6>
             </div>
           </div>
-            </div>
+        </div>
+        
+        
+        <!-- POST BOX MODAL  -->
+        <div class="post-popup" id="postPopup">
+              <div class="overlay"></div>
+              <div class="post-content">
+              <i id="postPopupClose" class=" fa-solid fa-xmark" ></i>
+              <div class="activeUserPost">
+                <img src="../assest/1684959391347.jpeg" alt="">
+                  <div class="activeUserName">           
+                  <h5 id="userName">Muhammad Naveed</h5>
+                  <h6>amirprinceak5@gmail.com</h6>          
+                </div>
+              </div>
+                <div class="postTextarea"><textarea class="inputTextarea"  placeholder="What do you want to talk about?" id="postInput" cols="100" rows="100" ></textarea></div>
+                <div class="input-postIcon">
+                <div class="photo-post post">
+                  <i class="fa-solid fa-image"></i>         
+                </div>
+                <div class="vedio-post post">
+                  <i class="fa-solid fa-video"></i>
+                  
+                </div>
+                <div class="event-post post">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  
+                </div>
+                <div class="artical-post post">
+                  <i class="fa-regular fa-newspaper"></i>
+                </div>
+              </div>
+              <div class="pBtn" ><button id="postBtn" class="postBtn">post</button></div>
+              <!-- <div class="postBtn">Post</div> -->
+            </div> 
+          </div>
+
           
-            <!-- amir content -->
-            <div class="postInputArea">
-              
-              <!-- <input type="text" id="postInput">
+          <!-- amir content -->
+          <div class="postInputArea">
+            
+            <!-- <input type="text" id="postInput">
               <button id="postBtn">post</button> -->
             </div>
 
